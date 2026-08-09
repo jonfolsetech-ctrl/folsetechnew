@@ -11,7 +11,16 @@ export const metadata: Metadata = {
   title: { default: "AI-Powered Web Design & SEO | FolseTech", template: "%s | FolseTech" },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  verification: process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : undefined
+  verification: process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : undefined,
+  authors: [{ name: siteConfig.copyright.owner }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: "AI-Powered Web Design & SEO | FolseTech",
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

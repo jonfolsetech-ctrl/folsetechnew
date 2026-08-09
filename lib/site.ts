@@ -4,4 +4,8 @@ export const siteConfig = {
   description: "AI-powered, SEO-first websites engineered to rank, convert, and grow.",
   email: "[BUSINESS EMAIL]",
   phone: "[BUSINESS PHONE]",
+  copyright: {
+    owner: "FolseTech",
+    year: new Date().getFullYear(),
+  },
 };
