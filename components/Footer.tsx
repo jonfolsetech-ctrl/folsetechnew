@@ -1,0 +1,4 @@
+import Link from "next/link";
+export function Footer() {
+  return <footer className="footer"><div className="container footer-grid"><div><div className="brand">Folse<span>Tech</span></div><p>AI-powered websites engineered for search visibility, performance, and growth.</p></div><div><h3>Services</h3><Link href="/services/seo-web-design">SEO Web Design</Link><Link href="/services/nextjs-development">Next.js Development</Link><Link href="/services/technical-seo">Technical SEO</Link></div><div><h3>Company</h3><Link href="/about">About</Link><Link href="/work">Work</Link><Link href="/contact">Contact</Link></div><div><h3>Resources</h3><Link href="/insights">Insights</Link><Link href="/free-website-audit">Free Audit</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/accessibility">Accessibility</Link></div></div></footer>;
+}

@@ -1,0 +1,2 @@
+import{NextResponse}from"next/server";import{leadSchema,scoreLead}from"@/lib/lead";
+export async function POST(request:Request){try{const json=await request.json();const lead=leadSchema.parse(json);const leadScore=scoreLead(lead);if(process.env.DATABASE_URL){/* Connect your database/CRM adapter here. Do not log personal lead data in production. */}return NextResponse.json({ok:true,leadScore},{status:201})}catch{return NextResponse.json({ok:false,error:"Invalid lead data"},{status:400})}}

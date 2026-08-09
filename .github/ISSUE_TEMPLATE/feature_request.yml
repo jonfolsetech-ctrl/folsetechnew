@@ -1,0 +1,31 @@
+name: Feature request
+description: Suggest a product, SEO, conversion, or engineering improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What user or business problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Primary area
+      options:
+        - SEO
+        - Conversion
+        - Design / UX
+        - Performance
+        - Accessibility
+        - AI / automation
+        - Developer experience
+        - Content
