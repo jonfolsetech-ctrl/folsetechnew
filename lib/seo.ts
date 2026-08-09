@@ -16,10 +16,51 @@ export function buildMetadata({ title, description, path = "/", noIndex = false 
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness"],
     name: siteConfig.name,
+    alternateName: "FolseTech",
     url: siteConfig.url,
-    description: siteConfig.description
+    description: siteConfig.description,
+    founder: {
+      "@type": "Person",
+      name: siteConfig.founder.name,
+      url: new URL("/about", siteConfig.url).toString()
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Gonzales",
+        "@context": "https://schema.org"
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Ascension Parish"
+      }
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.location.city,
+      addressRegion: siteConfig.location.state,
+      postalCode: siteConfig.location.zip,
+      addressCountry: "US"
+    },
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
+    serviceArea: {
+      "@type": "City",
+      name: `${siteConfig.location.city}, ${siteConfig.location.state}`
+    },
+    knowsAbout: [
+      "Web Design",
+      "Web Development",
+      "SEO",
+      "Local SEO",
+      "Next.js Development",
+      "Technical SEO"
+    ],
+    sameAs: [
+      // Add social profiles when available
+    ]
   };
 }
 

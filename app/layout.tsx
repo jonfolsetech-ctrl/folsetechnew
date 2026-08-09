@@ -8,8 +8,8 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: "AI-Powered Web Design & SEO | FolseTech", template: "%s | FolseTech" },
-  description: siteConfig.description,
+  title: { default: "FolseTech | Web Design & SEO in Gonzales, LA", template: "%s | FolseTech" },
+  description: "FolseTech provides professional web design, development and local SEO for businesses in Gonzales and Ascension Parish, Louisiana. Build a website designed to rank, convert and generate leads.",
   applicationName: siteConfig.name,
   verification: process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : undefined,
   authors: [{ name: siteConfig.copyright.owner }],
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    title: "AI-Powered Web Design & SEO | FolseTech",
-    description: siteConfig.description,
+    title: "FolseTech | Web Design & SEO in Gonzales, LA",
+    description: "Professional web design, development and local SEO for businesses in Gonzales and Ascension Parish, Louisiana.",
     siteName: siteConfig.name,
   },
 };
